@@ -8,8 +8,11 @@ that is contained for example, in the Anaconda's mkl distribution.
 
 Package is based on a Anaconda installation on python . Ohter distributions are not
 supported.
+`conda install mkl` (be sure that your distribution is linked against the mkl, reinstalls numpy if necessary)
+
 
 `python setup.py install`
+
 `pytest tests`
 
 ## Import from other cython functions

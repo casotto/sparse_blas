@@ -5,9 +5,6 @@ from libc cimport stdlib
 
 # Sparse Level 1 routines for BLAS
 # https://software.intel.com/en-us/mkl-developer-reference-c-blas-level-1-routines-and-functions
-cdef extern from "cblas_sparse_headers.h":
-    void cblas_daxpyi(const int nz, const double a, const double *x,
-                       const int *indx, double *y)
 
 
 def sparse_axpyi(double[:] x_values, int[:] x_ind, double[:] y_dense, double a):
