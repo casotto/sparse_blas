@@ -1,9 +1,5 @@
 #ifndef CBLAS_H
 #define CBLAS_H
-#include <stddef.h>
-
-#include "cblas.h"
-#include "cblas_mangling.h"
 
 /*
  * ===========================================================================
