@@ -13,7 +13,6 @@ sources.append("sparse_blas/functions.pyx")
 print np.__config__.show()
 
 np_config = np.__config__.blas_opt_info
-
 include_dirs= np_config["include_dirs"]
 libraries= np_config["libraries"]
 library_dirs = np_config["library_dirs"]

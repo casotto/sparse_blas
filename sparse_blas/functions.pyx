@@ -22,3 +22,23 @@ def sparse_axpyi(double[:] x_values, int[:] x_ind, double[:] y_dense, double a):
     cblas_daxpyi(nz, a, x, indx, y)
 
     return np.asarray(y_dense)
+
+
+def sparse_ddoti(double[:] x_values, int[:] x_ind, double[:] y_dense):
+    # res = x[0]*y[indx[0]] + x[1]*y[indx[1]] +...+ x[nz-1]*y[indx[nz-1]]
+    # (nz, x_values, x_ind) represents a sparse vector
+    # y is a vector of full storage form
+
+
+    assert x_values.shape[0] == x_ind.shape[0]
+    cdef int nz = <int> x_values.shape[0]
+    # take out values from
+    cdef double* x = &x_values[0]
+    cdef int* indx = &x_ind[0]
+    cdef double *y = &y_dense[0]
+    cdef double dot
+
+    dot = cblas_ddoti(nz,x,indx, y)
+
+    return dot
+
