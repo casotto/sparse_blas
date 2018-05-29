@@ -1,5 +1,5 @@
 import numpy as np
-from sparse_blas.functions import sparse_axpyi, sparse_ddoti
+from sparse_blas.functions import sparse_axpyi, sparse_ddoti, sparse_dgthr
 
 
 def test_sparse_dot(n = 100, verbose = True):
@@ -43,3 +43,17 @@ def test_sparse_ddoti(n = 100, verbose = False):
 
     print res_sparse, res_real
     np.testing.assert_allclose(res_sparse, res_real)
+
+
+def test_sparse_dgthr(n = 100):
+    nz = np.random.choice(n)
+    y = np.random.rand(n)
+    y_tmp = y.copy()
+    x_values = np.random.rand(nz)
+    x_ind = np.random.choice(n,nz,replace=False).astype(np.int)
+
+    x_sub = sparse_dgthr(y,x_ind)
+
+
+    np.testing.assert_allclose(x_sub,
+                               y_tmp[x_ind])

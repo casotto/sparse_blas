@@ -4,3 +4,6 @@ cdef extern from "cblas_sparse_headers.h":
 
     double cblas_ddoti(const int nz, const double *x,
                             const int *indx, const double *y)
+
+    void cblas_dgthr(const int nz, double *y,
+                        double *x, const int *indx)
