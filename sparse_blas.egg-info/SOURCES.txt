@@ -1,7 +1,0 @@
-README.md
-setup.py
-sparse_blas/functions.c
-sparse_blas.egg-info/PKG-INFO
-sparse_blas.egg-info/SOURCES.txt
-sparse_blas.egg-info/dependency_links.txt
-sparse_blas.egg-info/top_level.txt
