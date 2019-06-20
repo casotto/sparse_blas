@@ -1,3 +1,7 @@
+#### Useful links
+
+https://iamtrask.github.io/2014/11/23/cython-blas-fortran/
+
 ## Sparse Blas
 
 In your journey to [optimize your python code](https://www.youtube.com/watch?v=zQeYx87mfyw), at some point you can touch a level where, no matter you ported all your code to **cython**, the bottleneck is given by linear algebra operations.
