@@ -2,6 +2,14 @@
 
 https://iamtrask.github.io/2014/11/23/cython-blas-fortran/
 
+https://stackoverflow.com/questions/31931798/implementing-faster-python-inner-product-with-blas
+
+https://books.google.fr/books?id=isTBDAAAQBAJ&pg=PA206&lpg=PA206&dq=blas+naive+implementation&source=bl&ots=w4RCSBhlhJ&sig=AGYoq4b8Z6Lh5KrlvKD2ym2Kujc&hl=fr&sa=X&ved=0ahUKEwiY4-CV1J7bAhWhA8AKHUYUBRMQ6AEIPzAC#v=onepage&q=blas%20naive%20implementation&f=false
+
+https://stackoverflow.com/questions/11443302/compiling-numpy-with-openblas-integration
+
+http://markus-beuckelmann.de/blog/boosting-numpy-blas.html
+
 ## Sparse Blas
 
 In your journey to [optimize your python code](https://www.youtube.com/watch?v=zQeYx87mfyw), at some point you can touch a level where, no matter you ported all your code to **cython**, the bottleneck is given by linear algebra operations.
